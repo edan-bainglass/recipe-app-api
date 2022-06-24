@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: . # build docker image inside current directory
+      args:
+        - DEV=true # include dev-dependencies
+    ports:
+      - "8000:8000" # connect local:container ports
+    volumes:
+      - ./app:/app # map local:container directories (syncs real-time updates)
+
+    # default docker-compose command
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
