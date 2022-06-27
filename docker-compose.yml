@@ -15,11 +15,14 @@ services:
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
 
+    # set up environment variables (used by app's settings.py)
     environment:
       - DB_HOST=db
       - DB_NAME=devdb
       - DB_USER=devuser
       - DB_PASSWORD=changeme
+
+    # set up connection between services
     depends_on:
       - db
 
