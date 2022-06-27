@@ -3,7 +3,7 @@ LABEL maintainer="edanbainglass"
 
 # do not buffer python output to avoid delays
 # python output printed directly to screen
-ENV PYTHONBUFFERED 1 
+ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
