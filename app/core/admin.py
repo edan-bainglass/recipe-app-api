@@ -33,22 +33,24 @@ class UserAdmin(BaseUserAdmin):
         ),
     )
     readonly_fields = ['last_login']
-    add_fieldsets = ((
-        None,
-        {
-            'classes': ('wide', ),  # css class
-            'fields': (
-                'email',
-                'password1',
-                'password2',
-                'name',
-                'is_active',
-                'is_staff',
-                'is_superuser',
-            ),
-        },
-    ), )
+    add_fieldsets = (
+        (
+            None,
+            {
+                'classes': ('wide', ),  # css class
+                'fields': (
+                    'email',
+                    'password1',
+                    'password2',
+                    'name',
+                    'is_active',
+                    'is_staff',
+                    'is_superuser',
+                ),
+            },
+        ), )
 
 
 # second argument assigns the custom admin class
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Recipe)
