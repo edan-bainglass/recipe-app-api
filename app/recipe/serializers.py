@@ -6,7 +6,7 @@ from rest_framework import serializers
 from core.models import Recipe, Tag, Ingredient
 
 
-class IngredientSerializer(serializers.ModelField):
+class IngredientSerializer(serializers.ModelSerializer):
     """Serializer for ingredients."""
 
     class Meta:
