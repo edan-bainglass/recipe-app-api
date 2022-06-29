@@ -142,3 +142,8 @@ REST_FRAMEWORK = {
     # assign drf-spectacular library as schema processor
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
+# required for images to work on the browsable API
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,
+}
