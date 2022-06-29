@@ -24,6 +24,7 @@ services:
       - DB_NAME=devdb
       - DB_USER=devuser
       - DB_PASSWORD=changeme
+      - DEBUG=1
 
     # set up connection between services
     depends_on:
